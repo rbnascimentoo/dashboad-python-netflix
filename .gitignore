@@ -1,0 +1,41 @@
+# Ambientes Virtuais
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Arquivos de cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos de cache do Streamlit
+.streamlit/
+
+# Arquivos de IDEs
+.vscode/
+.idea/
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de dependências (gerados)
+pip-wheel-metadata/
+
+# Logs
+*.log
+
+# Arquivos de build e distribuição
+build/
+dist/
+*.egg-info/
+
+# Testes
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Notebooks
+.ipynb_checkpoints
