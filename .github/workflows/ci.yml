@@ -1,0 +1,36 @@
+# Nome do Workflow
+name: CI-CD
+
+# Define os gatilhos (triggers) para o workflow
+on:
+  # Roda quando um push é feito para a branch 'main'
+  push:
+    branches: [ "main" ]
+  # Roda quando um pull request é aberto para a branch 'main'
+  pull_request:
+    branches: [ "main" ]
+
+# Define os jobs (tarefas) que serão executados
+jobs:
+  build:
+    # O tipo de máquina virtual para rodar o job
+    runs-on: ubuntu-latest
+
+    # Passos que compõem o job
+    steps:
+      # 1. Clona o seu repositório para a máquina virtual
+      - uses: actions/checkout@v3
+
+      # 2. Configura o ambiente Python
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      # 3. Instala as dependências do projeto
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+

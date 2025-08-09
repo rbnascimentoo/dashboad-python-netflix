@@ -95,12 +95,12 @@ if df is not None:
             top_genres,
             names='Gênero',
             values='Contagem',
-            title='Top 15 Gêneros na Netflix'
+            title='Distribuição por Gêneros na Netflix'
         )
         st.plotly_chart(fig_pie_genres, use_container_width=True)
 
     # --- Conteúdo Principal ---
-    st.header(f"Exibindo: {tipo_selecionado}s")
+    st.header(f"Exibindo: {tipo_selecionado}")
 
     # Exibindo os dados filtrados em uma tabela
     st.subheader("Dados Filtrados")
